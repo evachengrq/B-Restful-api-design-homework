@@ -17,11 +17,15 @@ public class StudentService {
         studentList.add(1, new Student(2, "Roy", "Male", "Roy studies Civil Engineering."));
     }
 
-//    public List<Student> getStudent() {
-//        return studentList;
-//    }
+    public List<Student> getStudent() {
+        return studentList;
+    }
 
     public void addStudent(Student student) {
         studentList.add(studentList.size(), student);
+    }
+
+    public void deleteStudent(Integer id) {
+        studentList.remove(id - 1);
     }
 }

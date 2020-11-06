@@ -23,6 +23,11 @@ public class StudentController {
     @ResponseStatus(HttpStatus.CREATED)
     public void addStudent(@RequestBody Student student) {
         studentService.addStudent(student);
-        System.out.println(student);
+    }
+
+    @DeleteMapping("/students/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteStudent(@PathVariable int id) {
+        studentService.deleteStudent(id);
     }
 }
