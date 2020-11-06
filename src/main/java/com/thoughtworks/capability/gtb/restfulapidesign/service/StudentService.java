@@ -30,4 +30,8 @@ public class StudentService {
     public void deleteStudent(Integer id) {
         studentList.remove(id - 1);
     }
+
+    public Student getStudentById(int id) {
+        return studentList.get(id - 1);
+    }
 }
