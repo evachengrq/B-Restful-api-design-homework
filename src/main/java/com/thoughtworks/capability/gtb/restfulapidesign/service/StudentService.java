@@ -18,7 +18,13 @@ public class StudentService {
         studentList.add(1, new Student(2, "Roy", "Male", "Roy studies Civil Engineering."));
     }
 
-    public List<Student> getStudent(String gender) {
+    public List<Student> getAllStudent() { return studentList; }
+
+    public Student getStudentById(int id) {
+        return studentList.get(id - 1);
+    }
+
+    public List<Student> getStudentByGender(String gender) {
         return studentList.stream().filter(student -> gender == null || student.getGender().equals(gender))
                 .collect(Collectors.toList());
     }
@@ -31,7 +37,9 @@ public class StudentService {
         studentList.remove(id - 1);
     }
 
-    public Student getStudentById(int id) {
-        return studentList.get(id - 1);
+
+    public void updateStudent(int id, Student student) {
+        student.setId(id);
+        studentList.set(id - 1, student);
     }
 }
