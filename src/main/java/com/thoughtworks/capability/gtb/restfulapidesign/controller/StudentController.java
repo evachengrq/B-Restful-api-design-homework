@@ -14,10 +14,10 @@ public class StudentController {
 
     public StudentController(StudentService studentService) { this.studentService = studentService; }
 
-//    @GetMapping("/students")
-//    public List<Student> getStudent() {
-//        return studentService.getStudent();
-//    }
+    @GetMapping("/students")
+    public List<Student> getStudent(@RequestParam (value = "gender", required = false) String gender) {
+        return studentService.getStudent(gender);
+    }
 
     @PostMapping("/students")
     @ResponseStatus(HttpStatus.CREATED)
