@@ -1,6 +1,5 @@
 package com.thoughtworks.capability.gtb.restfulapidesign.controller;
 
-import ch.qos.logback.core.net.SyslogOutputStream;
 import com.thoughtworks.capability.gtb.restfulapidesign.dto.Student;
 import com.thoughtworks.capability.gtb.restfulapidesign.service.StudentService;
 import org.springframework.http.HttpStatus;
