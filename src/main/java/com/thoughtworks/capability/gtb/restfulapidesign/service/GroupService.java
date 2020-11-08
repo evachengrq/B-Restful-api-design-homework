@@ -36,4 +36,11 @@ public class GroupService {
     }
 
 
+    public void updateGroupName(int id, String name) {
+        groupList.get(id - 1).setName(name);
+    }
+
+    public List<Group> getAllGroups() {
+        return groupList;
+    }
 }
